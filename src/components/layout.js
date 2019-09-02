@@ -1,6 +1,8 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { ThemeProvider } from "styled-components"
 import Aside from "../components/aside"
+import Instagram from "../components/instagram"
+import { theme } from "../styles"
 
 const Main = styled.main`
   display: grid;
@@ -23,6 +25,9 @@ const Layout = ({ children }) => {
 
         <Aside />
       </Main>
+      <ThemeProvider theme={theme}>
+        <Instagram />
+      </ThemeProvider>
       <footer></footer>
     </>
   )

@@ -23,3 +23,27 @@ export const setTransition = ({
 } = {}) => {
   return `transition:${property} ${time} ${timing}`
 }
+
+export const theme = {
+  display: "flex",
+  borderLeft: "none",
+  borderRight: "none",
+  padding: "0",
+  width: "12.5vw",
+  gridGap: "0",
+  transition: "none",
+  boxShadow: "none",
+  displayH2: "none",
+}
+
+export const themeAside = {
+  display: "grid",
+  borderLeft: "1px solid" + setColor.accentColor,
+  borderRight: "1px solid" + setColor.accentColor,
+  padding: "1rem",
+  width: "100%",
+  gridGap: "1rem",
+  transition: "200ms box-shadow linear",
+  boxShadow: "0 2px 14px" + setColor.mainGrey,
+  displayH2: "block",
+}
