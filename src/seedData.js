@@ -1,4 +1,4 @@
-export const MenuItems = [
+export const menuItems = [
   {
     id: 1,
     link: "/",
@@ -16,9 +16,9 @@ export const MenuItems = [
   },
 ]
 
-export const SloganWords = `There's more to life than Hustle & Grind`
+export const sloganWords = `There's more to life than Hustle & Grind`
 
-export const Events = [
+export const events = [
   // when create the Strapi Content Type - add Featured Boolean, Featured Image - Media - add Relation to Guests for Friends
   {
     id: 1,
@@ -211,14 +211,14 @@ export const Events = [
   },
 ]
 
-export const BioData = {
+export const bioData = {
   author: "Jason & Ryan",
   headline: "Food with Friends",
   content:
     "There is more to Life than Hustle & Grind. It is about spending time with those you care about, eating good food, drinking great drinks and simply enjoying life.",
 }
 
-export const NewsletterData = {
+export const newsletterData = {
   headline: "Time to Eat",
   tagLine: "Sign up for Food with Friends.",
   buttonText: "Get Food with Friends Alerts",

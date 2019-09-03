@@ -7,21 +7,21 @@ import styled from "styled-components"
 import { themeAside } from "../styles"
 import { ThemeProvider } from "styled-components"
 
-const Aside = styled.aside`
+const AsideHTML = styled.aside`
   max-width: 350px;
 `
 
-const aside = () => {
+const Aside = () => {
   return (
-    <Aside>
+    <AsideHTML>
       <Bio />
       <NewsletterSignup />
       <RecentEvents />
       <ThemeProvider theme={themeAside}>
         <Instagram />
       </ThemeProvider>
-    </Aside>
+    </AsideHTML>
   )
 }
 
-export default aside
+export default Aside

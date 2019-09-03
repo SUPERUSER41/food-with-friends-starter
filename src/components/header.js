@@ -2,9 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import { RowMenu } from "../components/menu"
 import Logo from "../components/global/logo"
-import { MenuItems } from "../seedData"
+import { menuItems } from "../seedData"
 import { setColor, setFontFamily, setFontSize } from "../styles"
-import { SloganWords } from "../seedData"
+import { sloganWords } from "../seedData"
 import MobileMenu from "../components/mobileMenu"
 import { createGlobalStyle } from "styled-components"
 
@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const Header = styled.header`
+const HeaderHTML = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,18 +33,18 @@ const P = styled.p`
   text-align: center;
 `
 
-const header = () => {
+const Header = () => {
   return (
     <>
       <GlobalStyle />
-      <MobileMenu right MenuItems={MenuItems} />
-      <Header>
+      <MobileMenu right menuItems={menuItems} />
+      <HeaderHTML>
         <Logo />
-        <P> {SloganWords}</P>
-      </Header>
-      <RowMenu MenuItems={MenuItems} center />
+        <P> {sloganWords}</P>
+      </HeaderHTML>
+      <RowMenu menuItems={menuItems} center />
     </>
   )
 }
 
-export default header
+export default Header

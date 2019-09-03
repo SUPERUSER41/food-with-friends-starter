@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import { elastic as Menu } from "react-burger-menu"
-import { MenuItems } from "../seedData"
+import { menuItems } from "../seedData"
 import { createGlobalStyle } from "styled-components"
 import { setColor, setFontFamily } from "../styles"
 
@@ -85,11 +85,9 @@ Note: Beware of modifying this element as it can break the animations - you shou
   .bm-overlay {
     background: rgba(0, 0, 0, 0.6);
   }
-
-  
 `
 
-const menuItems = MenuItems.map(item => (
+const menu = menuItems.map(item => (
   <Link key={item.id} to={`${item.link}/`}>
     {item.name}
   </Link>
@@ -100,7 +98,7 @@ export default props => {
     <>
       <GlobalStyle />
       <Menu {...props} pageWrapId={"page-wrap"}>
-        {menuItems}
+        {menu}
       </Menu>
     </>
   )

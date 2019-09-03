@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
-const Logo = ({ className, small }) => {
+const LogoImage = ({ className, small }) => {
   const data = useStaticQuery(query)
 
   return (
@@ -13,7 +13,7 @@ const Logo = ({ className, small }) => {
   )
 }
 
-const LogoWrapper = styled(Logo)`
+const Logo = styled(LogoImage)`
   width: ${props => (props.small ? "150px" : "150px")};
 
   @media (min-width: 768px) {
@@ -37,4 +37,4 @@ const query = graphql`
   }
 `
 
-export default LogoWrapper
+export default Logo

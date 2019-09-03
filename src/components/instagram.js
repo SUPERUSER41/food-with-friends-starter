@@ -4,7 +4,7 @@ import styled from "styled-components"
 import useInstagram from "../hooks/use-instragram"
 import { setColor, setFontFamily } from "../styles"
 
-const PhotosDiv = styled.div`
+const Div = styled.div`
   border-top: 1px solid ${setColor.accentColor};
   border-bottom: 1px solid ${setColor.accentColor};
   border-left: ${props => props.theme.borderLeft};
@@ -12,7 +12,7 @@ const PhotosDiv = styled.div`
   padding: ${props => props.theme.padding};
 `
 
-const PhotosFlex = styled.div`
+const FlexDiv = styled.div`
   display: ${props => props.theme.display};
   flex-flow: row nowrap;
   grid-template-columns: 1fr 1fr 1fr;
@@ -30,7 +30,7 @@ const H2 = styled.h2`
   padding: 0;
 `
 
-const PhotoLink = styled.a`
+const A = styled.a`
   width: ${props => props.theme.width};
   transition: ${props => props.theme.width};
 
@@ -45,16 +45,16 @@ const Instagram = () => {
   const instaPhotos = useInstagram()
 
   return (
-    <PhotosDiv>
+    <Div>
       <H2>Instagram</H2>
-      <PhotosFlex>
+      <FlexDiv>
         {instaPhotos.map(photo => (
-          <PhotoLink href={`https://instagram.com/p/${photo.id}/`}>
+          <A href={`https://instagram.com/p/${photo.id}/`}>
             <Image key={photo.id} fluid={photo.fluid} alt={photo.caption} />
-          </PhotoLink>
+          </A>
         ))}
-      </PhotosFlex>
-    </PhotosDiv>
+      </FlexDiv>
+    </Div>
   )
 }
 
