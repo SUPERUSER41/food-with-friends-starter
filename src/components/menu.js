@@ -3,8 +3,8 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { setColor, setFontFamily } from "../styles"
 
-const Menu = ({ className, MenuItems, center }) => {
-  const menuLiItems = MenuItems.map(item => (
+const Menu = ({ className, menuItems, center }) => {
+  const menuLiItems = menuItems.map(item => (
     <li key={item.id}>
       <Link to={`${item.link}/`}>{item.name}</Link>
     </li>

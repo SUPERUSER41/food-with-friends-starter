@@ -1,12 +1,12 @@
 import React from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import { setColor, setFontFamily } from "../styles"
-import { NewsletterData } from "../seedData"
+import { newsletterData } from "../seedData"
 import Button from "../components/global/button"
 import Input from "../components/global/Input"
 import styled from "styled-components"
 
-const FormSection = styled.section`
+const Section = styled.section`
   background-color: ${setColor.mainBlack};
   padding: 1rem;
   color: ${setColor.offWhite};
@@ -76,9 +76,9 @@ export default class MailChimpComponent extends React.Component {
   render() {
     return (
       <>
-        <FormSection class="form-section">
-          <h3 class="form-h3">{NewsletterData.headline}</h3>
-          <p class="form-p">{NewsletterData.tagline}</p>
+        <Section class="form-section">
+          <h3 class="form-h3">{newsletterData.headline}</h3>
+          <p class="form-p">{newsletterData.tagline}</p>
           <div>
             <form class="form-form" onSubmit={this._handleSubmit}>
               <label class="form-label" for="email">
@@ -93,16 +93,16 @@ export default class MailChimpComponent extends React.Component {
                 pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
                 required
               />
-              <Button type="submit">{NewsletterData.buttonText}</Button>
+              <Button type="submit">{newsletterData.buttonText}</Button>
               <p class="form-p">
                 <small>
                   <span>*</span>
-                  {NewsletterData.privacyText}
+                  {newsletterData.privacyText}
                 </small>
               </p>
             </form>
           </div>
-        </FormSection>
+        </Section>
       </>
     )
   }

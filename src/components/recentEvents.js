@@ -1,10 +1,10 @@
 import React from "react"
 import { setColor, setFontFamily } from "../styles"
 import styled from "styled-components"
-import { Events } from "../seedData"
+import { events } from "../seedData"
 import { Link } from "gatsby"
 
-const RecentEvents = styled.section`
+const Section = styled.section`
   padding: 1rem;
   border: 1px solid ${setColor.accentColor};
   margin-bottom: 2rem;
@@ -32,19 +32,19 @@ const RecentEvents = styled.section`
   }
 `
 
-const recentEvents = () => {
+const RecentEvents = () => {
   return (
-    <RecentEvents>
+    <Section>
       <h3>Recent Events</h3>
       <ul>
-        {Events.slice(0, 5).map(event => (
+        {events.slice(0, 5).map(event => (
           <li key={event.id}>
             <Link to={event.slug}>{event.title}</Link>
           </li>
         ))}
       </ul>
-    </RecentEvents>
+    </Section>
   )
 }
 
-export default recentEvents
+export default RecentEvents

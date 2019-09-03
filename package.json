@@ -24,6 +24,7 @@
     "gatsby-source-instagram": "^0.5.1",
     "gatsby-transformer-sharp": "^2.2.12",
     "install": "^0.13.0",
+    "lodash": "^4.17.15",
     "npm": "^6.11.2",
     "react": "^16.9.0",
     "react-animated-slider": "^1.1.4",
