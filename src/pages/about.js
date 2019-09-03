@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 
 const About = () => {
   return (
-    <div id="outer-container" outerContainerId={"outer-container"}>
+    <div>
       <Header />
       <Layout>
         <div>about</div>

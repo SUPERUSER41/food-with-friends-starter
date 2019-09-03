@@ -1,19 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
+import { get } from "lodash"
 import styled from "styled-components"
 import Slider from "react-animated-slider"
 import "react-animated-slider/build/horizontal.css"
-import { Events } from "../seedData"
+import { events } from "../seedData"
 import { setColor, setFontFamily } from "../styles"
 import { graphql, useStaticQuery } from "gatsby"
 
-const SliderWrapper = styled.section`
+const Section = styled.section`
   margin-bottom: 2rem;
   border-bottom: 1px solid ${setColor.accentColor};
   height: 350px;
 `
 
-const OuterImageTrack = styled.div`
+const OuterDiv = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +24,7 @@ const OuterImageTrack = styled.div`
   background-size: cover;
 `
 
-const InnerImageTrack = styled.div`
+const InnerDiv = styled.div`
   width: 100%;
   max-width: 550px;
   padding: 0.5rem;
@@ -43,14 +44,14 @@ const InnerImageTrack = styled.div`
   }
 `
 
-const imageSlider = () => {
+const ImageSlider = () => {
   const query = graphql`
     query image {
-      image: file(relativePath: { eq: "bbq-chicken.jpg" }) {
-        publicURL
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
+      allFile {
+        edges {
+          node {
+            publicURL
+            name
           }
         }
       }
@@ -58,20 +59,29 @@ const imageSlider = () => {
   `
   const data = useStaticQuery(query)
 
+  const images = get(data, "allFile.edges", []).reduce((acc, current) => {
+    const {
+      node: { name, publicURL },
+    } = current
+    acc[name] = publicURL
+    return acc
+  }, {})
+
   return (
-    <SliderWrapper>
+    <Section>
       <Slider>
-        {Events.slice(0, 3).map((event, index) => (
-          <OuterImageTrack
+        {events.slice(0, 3).map((event, index) => (
+          <OuterDiv
             key={index}
             className="slider-content"
             style={{
-              //backgroundImage: `url('${event.slug} + '.jpg')`,
-              backgroundImage: `url(${data.image.publicURL})`,
+              backgroundImage: `url(${window.location.origin}${
+                images[event.slug]
+              })`,
               height: `350px`,
             }}
           >
-            <InnerImageTrack>
+            <InnerDiv>
               <p>{event.importantInformation.dinnerDate}</p>
               <h2>
                 <Link
@@ -81,12 +91,12 @@ const imageSlider = () => {
                   {event.title} &rarr;{" "}
                 </Link>
               </h2>
-            </InnerImageTrack>
-          </OuterImageTrack>
+            </InnerDiv>
+          </OuterDiv>
         ))}
       </Slider>
-    </SliderWrapper>
+    </Section>
   )
 }
 
-export default imageSlider
+export default ImageSlider

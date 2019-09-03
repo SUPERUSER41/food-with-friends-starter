@@ -5,7 +5,7 @@ import ImageSlider from "../components/imageSlider"
 
 const Home = () => {
   return (
-    <div id="outer-container" outerContainerId={"outer-container"}>
+    <div>
       <Header />
       <ImageSlider />
       <Layout>

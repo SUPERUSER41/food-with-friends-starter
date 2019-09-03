@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { BioData } from "../seedData"
+import { bioData } from "../seedData"
 import { graphql, useStaticQuery } from "gatsby"
 import { setColor, setFontFamily } from "../styles"
 
-const BioDiv = styled.section`
+const Section = styled.section`
   padding: 0 1rem;
   border: solid 1px ${setColor.accentColor};
   ${setFontFamily.main}
@@ -26,17 +26,17 @@ const Bio = ({ className, small }) => {
   const data = useStaticQuery(query)
 
   return (
-    <BioDiv>
-      <h3>{BioData.headline}</h3>
+    <Section>
+      <h3>{bioData.headline}</h3>
       <Img className={className} fluid={data.logo.childImageSharp.fluid} />
-      <small>{BioData.author}</small>
-      <p>{BioData.content}</p>
-    </BioDiv>
+      <small>{bioData.author}</small>
+      <p>{bioData.content}</p>
+    </Section>
   )
 }
 
 const query = graphql`
-  query BioImage {
+  query bioImage {
     logo: file(relativePath: { eq: "bbq-jason.jpg" }) {
       relativePath
       childImageSharp {
