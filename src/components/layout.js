@@ -2,6 +2,7 @@ import React from "react"
 import styled, { ThemeProvider } from "styled-components"
 import Aside from "../components/aside"
 import Instagram from "../components/instagram"
+import Footer from "./footer"
 import { theme } from "../styles"
 
 const Main = styled.main`
@@ -28,7 +29,7 @@ const Layout = ({ children }) => {
       <ThemeProvider theme={theme}>
         <Instagram />
       </ThemeProvider>
-      <footer></footer>
+      <Footer />
     </>
   )
 }

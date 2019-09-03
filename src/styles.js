@@ -4,7 +4,7 @@ export const setColor = {
   offWhite: "#fafafa",
   // Strapi - #2F7FE9 Jason- #c700eb gatsby #663399
   mainGrey: "#333",
-  lightGrey: "#f5f5f5",
+  lightGrey: "#939393",
 }
 
 export const setFontFamily = {
