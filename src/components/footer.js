@@ -7,8 +7,6 @@ import { ColumnMenu } from "../components/menu"
 import Img from "gatsby-image"
 import { menuItems } from "../seedData"
 
-// recentsevents?
-
 const Footer = styled.footer`
   background-color: ${setColor.lightGrey};
   display: flex;
