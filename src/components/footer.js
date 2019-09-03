@@ -68,7 +68,7 @@ const PrivacyFooter = styled.footer`
   }
 `
 
-const FooterMenuWrapper = styled.div`
+const Div = styled.div`
   ul {
     display: flex;
     align-items: start;
@@ -99,9 +99,9 @@ const FooterSection = () => {
         </Aside>
 
         <Aside>
-          <FooterMenuWrapper>
+          <Div>
             <ColumnMenu menuItems={menuItems} />
-          </FooterMenuWrapper>
+          </Div>
         </Aside>
         <Aside>
           <NewsletterSignup />
