@@ -2,32 +2,45 @@ import React from "react"
 import { Link } from "gatsby"
 import Image from "gatsby-image"
 import styled from "styled-components"
-import Subtitle from "./global/subTitle"
+import SubTitle from "./global/subTitle"
 import ReadMoreLink from "./global/readMoreLink"
+import { setFontFamily, setColor } from "../styles"
 
-const Card = ({
-  details,
-  information,
-  isMainEvent,
-  slug,
-  subtitle,
-  title,
-  image,
-}) => {
+const P = styled.p`
+  padding: 1rem;
+  ${setFontFamily.main}
+`
+
+const Img = styled(Image)`
+  height: 200px;
+  margin-top: 1rem;
+`
+
+const H3 = styled.h3`
+  height: 2rem;
+`
+
+const Card = ({ details, information, isMainEvent, slug, title, image }) => {
   return (
-    <div className={isMainEvent ? "grid" : ""}>
-      <h3>
+    <div
+      style={{
+        borderBottom: "1px solid" + setColor.accentColor,
+        paddingBottom: "2rem",
+      }}
+      className={isMainEvent ? "grid" : ""}
+    >
+      <H3>
         <Link to={slug}>{title}</Link>
-      </h3>
-      {isMainEvent && <Subtitle subtitle={subtitle} />}
-      <Image fluid={image.fluid} />
+      </H3>
+      {isMainEvent && <SubTitle subTitle="Next Food Event" />}
+      <Img fluid={image.fluid} />
       {isMainEvent && (
-        <p>
+        <P>
           <strong>Next Event Date: </strong>
           {information.dinnerDate}
-        </p>
+        </P>
       )}
-      <p>{details}</p>
+      <P>{details.substring(0, 150) + "..."}</P>
       <ReadMoreLink to={slug}>
         {isMainEvent ? "All Information" : "Read More"} &rarr;
       </ReadMoreLink>
@@ -37,4 +50,5 @@ const Card = ({
 
 export default styled(Card)`
   align-self: center;
+  border: 1px solid ${setColor.accentColor};
 `

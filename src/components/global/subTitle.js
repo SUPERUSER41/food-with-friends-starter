@@ -17,6 +17,7 @@ export default styled(SubTitle)`
   display: block;
   padding: 0.25rem 0 1.75rem;
   text-align: center;
+  width: 300px;
 
   span {
     position: relative;

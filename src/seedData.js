@@ -22,7 +22,7 @@ const events = [
   // when create the Strapi Content Type - add Featured Boolean, Featured Image - Media - add Relation to Guests for Friends
   {
     id: 1,
-    title: "November 5 Grilled Hotdogs",
+    title: "Grilled Hotdogs",
     author: "Jason Lengstorf",
     information: {
       dinnerDate: "October 30, 2019",
@@ -46,7 +46,7 @@ const events = [
   },
   {
     id: 2,
-    title: "October 20 French Pastry & Wine Dining",
+    title: "French Pastry & Wine Dining",
     author: "Jason Lengstorf",
     information: {
       dinnerDate: "October 20, 2019",
@@ -73,7 +73,7 @@ const events = [
   },
   {
     id: 3,
-    title: "November 15 Eggs And Salad",
+    title: "Eggs And Salad",
     author: "Jason Lengstorf",
     information: {
       dinnerDate: "November 15, 2019",
@@ -100,10 +100,10 @@ const events = [
   },
   {
     id: 4,
-    title: "August 15 Autumn Soup",
+    title: "Autumn Soup",
     author: "Jason Lengstorf",
     information: {
-      dinnerDate: "August 15, 2019",
+      dinnerDate: "January 15, 2020",
       location: "Savor Soup House",
       address: "7337 SE Foster Rd, Portland, OR 97206, USA",
       googleMap: "https://goo.gl/maps/Du8BE3ZsCQXLpaW26",
@@ -127,10 +127,10 @@ const events = [
   },
   {
     id: 5,
-    title: "August 25 Steak Tacos",
+    title: "Steak Tacos",
     author: "Jason Lengstorf",
     information: {
-      dinnerDate: "August 25, 2019",
+      dinnerDate: "January 25, 2019",
       location: "Stella Taco",
       address: "3060 SE Division St, Portland, OR 97202, USA",
       googleMap: "https://goo.gl/maps/oEurHqe3Sjfk2VRZ7",
@@ -154,7 +154,7 @@ const events = [
   },
   {
     id: 6,
-    title: "October 10 BBQ Chicken Time",
+    title: "BBQ Chicken Time",
     author: "Jason Lengstorf",
     information: {
       dinnerDate: "October 10, 2019",
@@ -181,7 +181,7 @@ const events = [
   },
   {
     id: 7,
-    title: "December 1 Meatballs and Greens",
+    title: "Meatballs and Greens",
     author: "Jason Lengstorf",
     information: {
       dinnerDate: "December 1, 2019",
