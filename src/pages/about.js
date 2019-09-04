@@ -1,7 +1,7 @@
 import React from "react"
 import Header from "../components/header"
 import Layout from "../components/layout"
-import Title from "../components/global/Title"
+import Title from "../components/global/title"
 import Helmet from "react-helmet"
 import Article from "../components/global/article"
 
