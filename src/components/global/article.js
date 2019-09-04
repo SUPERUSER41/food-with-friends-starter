@@ -13,6 +13,7 @@ export default styled(Article)`
   grid-template-rows: auto;
   border-bottom: 1px solid ${setColor.accentColor};
   padding: 2rem;
+  padding-top: 0;
   .grid {
     grid-column: 1 / span 2;
     grid-row: 1/2;
@@ -40,5 +41,13 @@ export default styled(Article)`
     text-align: left;
     margin: 1rem 0;
     ${setFontFamily.main} font-size: 1rem;
+  }
+
+  div > p {
+    padding: 1rem;
+  }
+
+  div {
+    padding: 1rem;
   }
 `

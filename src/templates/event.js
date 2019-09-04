@@ -6,6 +6,20 @@ import Layout from "../components/layout"
 import Article from "../components/global/article"
 import Title from "../components/global/title"
 import * as seedData from "../seedData"
+import styled from "styled-components"
+import { setFontFamily, setColor } from "../styles"
+
+const UL = styled.ul`
+  padding: 1rem;
+  margin-top: 1rem;
+  li > a {
+    color: ${setColor.accentColor};
+    font-size: 1.4rem;
+    ${setFontFamily.main};
+    padding: 2rem;
+    margin-top: 1rem;
+  }
+`
 
 const Event = ({ data, path, pageContext }) => {
   const slug = path.replace("/", "")
@@ -22,17 +36,41 @@ const Event = ({ data, path, pageContext }) => {
     <Layout>
       <div>
         <Article>
-          <Image fluid={fluid} />
-          <Title title={currentEvent.title} />
-          <p>Posted By: {currentEvent.author}</p>
-          <h2>Important Information</h2>
-          <div>
-            <div>Dinner date: dinner date</div>
+          <Image className="grid" fluid={fluid} />
+          <div style={{ gridColumn: "1 / span 2" }}>
+            <Title title={currentEvent.title} />
+            <p>
+              <strong>Posted By:</strong> {currentEvent.author}
+            </p>
+            <h2>Important Information:</h2>
+            <div>
+              <div>
+                <strong>Dinner Date</strong> <br />
+                {currentEvent.information.dinnerDate}
+              </div>
+              <div>
+                <strong>Location</strong> <br />
+                {currentEvent.information.location}
+              </div>
+              <div>
+                <strong>Address</strong> <br />
+                {currentEvent.information.address}
+              </div>
+              <div>
+                <strong>Google Map</strong> <br />
+                <a href="{currentEvent.information.googleMap}">Directions</a>
+              </div>
+              <div>
+                <strong>Time</strong> <br />
+                {currentEvent.information.time}
+              </div>
+            </div>
+            <h2>Details:</h2>
+            <div>{currentEvent.details}</div>
           </div>
-          <div>{currentEvent.details}</div>
         </Article>
         <nav>
-          <ul
+          <UL
             style={{
               display: `flex`,
               flexWrap: `wrap`,
@@ -55,7 +93,7 @@ const Event = ({ data, path, pageContext }) => {
                 </Link>
               )}
             </li>
-          </ul>
+          </UL>
         </nav>
       </div>
     </Layout>
