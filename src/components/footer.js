@@ -30,7 +30,7 @@ const Footer = styled.footer`
   }
 
   span {
-    color: ${setColor.primaryColor};
+    color: ${setColor.accentColor};
     font-size: 1.1rem;
     padding-right: 0.25rem;
   }
