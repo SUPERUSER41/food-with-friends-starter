@@ -6,7 +6,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { setColor, setFontFamily } from "../styles"
 
 const Section = styled.section`
-  padding: 0 1rem;
+  padding: 1rem;
   border: solid 1px ${setColor.accentColor};
   ${setFontFamily.main}
   h3 {

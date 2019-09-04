@@ -6,7 +6,12 @@ import { setColor, setFontFamily } from "../styles"
 const Menu = ({ className, menuItems, center }) => {
   const menuLiItems = menuItems.map(item => (
     <li key={item.id}>
-      <Link to={`${item.link}/`}>{item.name}</Link>
+      <Link
+        activeStyle={{ color: `${setColor.accentColor}` }}
+        to={`${item.link}/`}
+      >
+        {item.name}
+      </Link>
     </li>
   ))
   return <ul className={className}>{menuLiItems}</ul>

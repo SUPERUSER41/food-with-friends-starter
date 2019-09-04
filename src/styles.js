@@ -2,6 +2,7 @@ export const setColor = {
   accentColor: "#C700EB",
   mainBlack: "#111111",
   offWhite: "#fafafa",
+  White: "#ffffff",
   // Strapi - #2F7FE9 Jason- #c700eb gatsby #663399
   mainGrey: "#333",
   lightGrey: "#939393",

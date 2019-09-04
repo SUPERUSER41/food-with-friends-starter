@@ -213,7 +213,7 @@ export const events = [
 
 export const bioData = {
   author: "Jason & Ryan",
-  headline: "Food with Friends",
+  headline: "About Us",
   content:
     "There is more to Life than Hustle & Grind. It is about spending time with those you care about, eating good food, drinking great drinks and simply enjoying life.",
 }

@@ -6,15 +6,7 @@ import { menuItems } from "../seedData"
 import { setColor, setFontFamily, setFontSize } from "../styles"
 import { sloganWords } from "../seedData"
 import MobileMenu from "../components/mobileMenu"
-import { createGlobalStyle } from "styled-components"
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-`
+import GlobalStyles from "../components/global/GlobalStyles"
 
 const HeaderHTML = styled.header`
   display: flex;
@@ -36,7 +28,7 @@ const P = styled.p`
 const Header = () => {
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyles />
       <MobileMenu right menuItems={menuItems} />
       <HeaderHTML>
         <Logo />
