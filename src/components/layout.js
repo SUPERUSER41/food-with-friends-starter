@@ -10,6 +10,7 @@ import { theme } from "../styles"
 const Main = styled.main`
   display: grid;
   width: 100vw;
+  padding: 1rem 2rem;
 
   @media (min-width: 736px) {
     margin: 2rem auto 4rem;

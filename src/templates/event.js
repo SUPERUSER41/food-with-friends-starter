@@ -43,7 +43,7 @@ const Event = ({ data, path, pageContext }) => {
       <div>
         <Article>
           <Image className="grid" fluid={fluid} />
-          <div style={{ gridColumn: "1 / span 2" }}>
+          <div style={{ gridColumn: "1 / span 2", minHeight: "60vw" }}>
             <Title title={currentEvent.title} />
             <p>
               <strong>Posted By:</strong> {currentEvent.author}
@@ -80,7 +80,7 @@ const Event = ({ data, path, pageContext }) => {
             style={{
               display: `flex`,
               flexWrap: `wrap`,
-              justifyContent: `space-between`,
+              justifyContent: `space-around`,
               listStyle: `none`,
               padding: 0,
             }}
