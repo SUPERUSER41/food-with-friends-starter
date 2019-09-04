@@ -2,7 +2,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import styled from "styled-components"
 import NewsletterSignup from "./newsletterSignup"
-import { setColor } from "../styles"
+import { setColor, setFontFamily } from "../styles"
 import { ColumnMenu } from "../components/menu"
 import Img from "gatsby-image"
 import { menuItems } from "../seedData"
@@ -54,14 +54,15 @@ const PrivacyFooter = styled.footer`
   justify-content: space-between;
   background-color: ${setColor.lightGrey};
   color: ${setColor.mainBlack};
-  padding: 2rem 1rem 0.5rem;
 
   & > p {
     width: 100%;
     border-top: 1px solid ${setColor.primaryColor};
     margin-top: 2rem;
-    padding-top: 1rem;
+    padding: 1rem 1rem;
     text-align: center;
+    font-size: 0.8rem;
+    ${setFontFamily.main};
   }
 `
 

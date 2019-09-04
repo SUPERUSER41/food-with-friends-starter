@@ -10,6 +10,9 @@ const Div = styled.div`
   grid-gap: ${props => props.theme.gridGap};
   grid-row-gap: 10px;
 `
+const H2 = styled.h2`
+  display: ${props => props.theme.displayH2};
+`
 
 const A = styled.a`
   width: ${props => props.theme.width};
@@ -27,7 +30,7 @@ const Instagram = () => {
 
   return (
     <section>
-      <h2>Instagram</h2>
+      <H2>Instagram</H2>
       <Div>
         {instaPhotos.map(photo => (
           <A href={`https://instagram.com/p/${photo.id}/`}>

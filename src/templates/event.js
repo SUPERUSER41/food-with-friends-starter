@@ -20,7 +20,13 @@ const UL = styled.ul`
     margin-top: 1rem;
   }
 `
-
+const Section = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid ${setColor.accentColor};
+`
 const Event = ({ data, path, pageContext }) => {
   const slug = path.replace("/", "")
   const { previous, next } = pageContext
@@ -43,7 +49,7 @@ const Event = ({ data, path, pageContext }) => {
               <strong>Posted By:</strong> {currentEvent.author}
             </p>
             <h2>Important Information:</h2>
-            <div>
+            <Section>
               <div>
                 <strong>Dinner Date</strong> <br />
                 {currentEvent.information.dinnerDate}
@@ -64,7 +70,7 @@ const Event = ({ data, path, pageContext }) => {
                 <strong>Time</strong> <br />
                 {currentEvent.information.time}
               </div>
-            </div>
+            </Section>
             <h2>Details:</h2>
             <div>{currentEvent.details}</div>
           </div>
