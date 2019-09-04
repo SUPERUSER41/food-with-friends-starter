@@ -7,7 +7,7 @@ import ReadMoreLink from "./global/readMoreLink"
 
 const Card = ({
   details,
-  importantInformation,
+  information,
   isMainEvent,
   slug,
   subtitle,
@@ -24,7 +24,7 @@ const Card = ({
       {isMainEvent && (
         <p>
           <strong>Next Event Date: </strong>
-          {importantInformation.dinnerDate}
+          {information.dinnerDate}
         </p>
       )}
       <p>{details}</p>

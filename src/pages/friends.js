@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 const Friends = () => {
   return (
     <div>
-      <Header />
       <Layout>
         <div>friends</div>
       </Layout>

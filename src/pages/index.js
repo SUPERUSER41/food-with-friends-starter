@@ -90,7 +90,7 @@ const Div = styled.div`
 
 //             <p>
 //               <strong>Next Event Date: </strong>
-//               {LatestEvent.importantInformation.dinnerDate}
+//               {LatestEvent.information.dinnerDate}
 //             </p>
 //             <p>{LatestEvent.Details}</p>
 
@@ -112,7 +112,7 @@ const IndexPage = () => {
     seed.events,
     data => {
       const date = new Date(
-        get(data, ["importantInformation", "dinnerDate"])
+        get(data, ["information", "dinnerDate"])
       ).toISOString()
 
       return date
@@ -121,9 +121,7 @@ const IndexPage = () => {
   )
   const getDiffDays = event => {
     const currentDate = new Date()
-    const eventDate = new Date(
-      get(event, ["importantInformation", "dinnerDate"])
-    )
+    const eventDate = new Date(get(event, ["information", "dinnerDate"]))
     const diffTime = eventDate.getTime() - currentDate.getTime()
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
 
