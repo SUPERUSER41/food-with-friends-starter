@@ -1,12 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-import { get } from "lodash"
 import styled from "styled-components"
 import Slider from "react-animated-slider"
 import "react-animated-slider/build/horizontal.css"
 import { events } from "../seedData"
 import { setColor, setFontFamily } from "../styles"
-import { graphql, useStaticQuery } from "gatsby"
 import useImages from "../hooks/useImages"
 
 const Section = styled.section`

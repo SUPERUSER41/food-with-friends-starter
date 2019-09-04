@@ -1,7 +1,7 @@
 const events = require("./src/seedData").events
 const path = require("path")
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
+exports.createPages = ({ node, getNode, actions }) => {
   const { createPage } = actions
   const eventTemplate = path.resolve("./src/templates/event.js")
 
