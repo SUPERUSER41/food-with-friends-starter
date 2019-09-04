@@ -5,22 +5,10 @@ import { events } from "../seedData"
 import { Link } from "gatsby"
 
 const Section = styled.section`
-  padding: 1rem;
-  border: 1px solid ${setColor.accentColor};
-  margin-bottom: 2rem;
-
   a {
     color: ${setColor.accentColor};
     text-decoration: none;
     ${setFontFamily.main};
-  }
-  h3 {
-    font-size: 1.5rem;
-    ${setFontFamily.serif};
-    font-weight: bold;
-    text-align: center;
-    padding: 0;
-    margin: 0;
   }
   ul {
     padding: 0;
@@ -35,7 +23,7 @@ const Section = styled.section`
 const RecentEvents = () => {
   return (
     <Section>
-      <h3>Recent Events</h3>
+      <h2>Recent Events</h2>
       <ul>
         {events.slice(0, 5).map(event => (
           <li key={event.id}>

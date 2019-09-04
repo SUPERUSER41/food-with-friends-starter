@@ -1,6 +1,6 @@
 import React from "react"
 import addToMailchimp from "gatsby-plugin-mailchimp"
-import { setColor, setFontFamily } from "../styles"
+import { setColor } from "../styles"
 import { newsletterData } from "../seedData"
 import Button from "../components/global/button"
 import Input from "../components/global/Input"
@@ -8,10 +8,8 @@ import styled from "styled-components"
 
 const Section = styled.section`
   background-color: ${setColor.mainBlack};
-  padding: 1rem;
+
   color: ${setColor.offWhite};
-  ${setFontFamily.main}
-  margin-bottom: 2rem;
 
   span {
     color: ${setColor.accentColor};
@@ -25,14 +23,8 @@ const Section = styled.section`
     display: block;
   }
 
-  h3 {
-    text-align: center;
+  h2 {
     color: ${setColor.accentColor};
-    ${setFontFamily.serif};
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    margin: 0;
-    font-weight: bold;
   }
 `
 
@@ -77,7 +69,7 @@ export default class MailChimpComponent extends React.Component {
     return (
       <>
         <Section class="form-section">
-          <h3 class="form-h3">{newsletterData.headline}</h3>
+          <h2 class="form-h3">{newsletterData.headline}</h2>
           <p class="form-p">{newsletterData.tagline}</p>
           <div>
             <form class="form-form" onSubmit={this._handleSubmit}>

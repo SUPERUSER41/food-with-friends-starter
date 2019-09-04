@@ -1,26 +1,9 @@
 import React from "react"
 import { IoLogoInstagram, IoLogoTwitter } from "react-icons/io"
 import styled from "styled-components"
-import { setColor, setFontFamily } from "../styles"
+import { setColor } from "../styles"
 
-const Div = styled.div`
-  border-top: 1px solid ${setColor.accentColor};
-  border-bottom: 1px solid ${setColor.accentColor};
-  border: 1px solid ${setColor.accentColor};
-  padding: ${props => props.theme.padding};
-  background-color: transparent;
-  margin-top: 2rem;
-  padding: 1rem;
-
-  h2 {
-    display: ${props => props.theme.displayH2};
-    font-size: 1.5rem;
-    ${setFontFamily.serif};
-    font-weight: bold;
-    text-align: center;
-    margin-top: 0;
-    padding: 0;
-  }
+const Section = styled.section`
   ul {
     display: flex;
     flex-direction: row;
@@ -35,7 +18,7 @@ const Div = styled.div`
     list-style-type: none;
   }
   a {
-    font-size: 120%;
+    font-size: 160%;
     text-decoration: none;
     color: ${setColor.accentColor};
 
@@ -48,7 +31,7 @@ const Div = styled.div`
 
 const SocialMedia = () => {
   return (
-    <Div>
+    <Section>
       <h2>Follow Us</h2>
       <ul>
         <li>
@@ -62,7 +45,7 @@ const SocialMedia = () => {
           </a>
         </li>
       </ul>
-    </Div>
+    </Section>
   )
 }
 

@@ -1,7 +1,7 @@
 import React from "react"
 import styled, { ThemeProvider } from "styled-components"
 import Helmet from "react-helmet"
-import Aside from "../components/aside"
+import Sidebar from "../components/sidebar"
 import Instagram from "../components/instagram"
 import Header from "./header"
 import Footer from "./footer"
@@ -36,7 +36,7 @@ const Layout = ({ children, topComponent }) => {
       <Main id="page-wrap">
         {children}
 
-        <Aside />
+        <Sidebar />
       </Main>
       <ThemeProvider theme={theme}>
         <Instagram />

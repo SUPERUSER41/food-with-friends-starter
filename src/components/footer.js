@@ -6,16 +6,23 @@ import { setColor } from "../styles"
 import { ColumnMenu } from "../components/menu"
 import Img from "gatsby-image"
 import { menuItems } from "../seedData"
+import Aside from "./global/aside"
 
 const Footer = styled.footer`
   background-color: ${setColor.lightGrey};
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  padding: 0 2rem;
+  padding: 2rem 2rem;
 
   aside {
-    padding: 2rem 0;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      width: 350px;
+    }
   }
 
   .form-h3 {
@@ -38,16 +45,6 @@ const Footer = styled.footer`
   aside > section > h3 {
     color: ${setColor.mainWhite};
     text-align: center;
-  }
-`
-
-const Aside = styled.aside`
-  max-width: 350px;
-  display: flex;
-  flex-direction: column;
-
-  a {
-    width: 350px;
   }
 `
 

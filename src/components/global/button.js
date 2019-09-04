@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { setColor, setFontFamily, setTransition } from "../../styles"
 
 const Button = styled.button`
-  display: inline-block;
+  display: block;
   width: 100%;
   padding: 0.25rem 0;
   background-color: ${setColor.accentColor};
@@ -19,7 +19,7 @@ const Button = styled.button`
   }
   text-decoration: none;
   cursor: pointer;
-  margin: 0.5rem 0;
+  margin: 0.5rem auto;
 `
 
 export default Button

@@ -4,17 +4,13 @@ import NewsletterSignup from "./newsletterSignup"
 import RecentEvents from "./recentEvents"
 import Instagram from "./instagram"
 import SocialMedia from "./socialMedia"
-import styled from "styled-components"
 import { themeAside } from "../styles"
 import { ThemeProvider } from "styled-components"
+import Aside from "../components/global/aside"
 
-const AsideHTML = styled.aside`
-  max-width: 350px;
-`
-
-const Aside = () => {
+const Sidebar = ({ className, children }) => {
   return (
-    <AsideHTML>
+    <Aside>
       <Bio />
       <NewsletterSignup />
       <RecentEvents />
@@ -22,8 +18,8 @@ const Aside = () => {
         <Instagram />
       </ThemeProvider>
       <SocialMedia />
-    </AsideHTML>
+    </Aside>
   )
 }
 
-export default Aside
+export default Sidebar
