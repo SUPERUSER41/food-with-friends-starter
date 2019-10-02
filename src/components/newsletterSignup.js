@@ -3,7 +3,7 @@ import addToMailchimp from "gatsby-plugin-mailchimp"
 import { setColor } from "../styles"
 import { newsletterData } from "../seedData"
 import Button from "../components/global/button"
-import Input from "../components/global/Input"
+import Input from "../components/global/input"
 import styled from "styled-components"
 
 const Section = styled.section`
